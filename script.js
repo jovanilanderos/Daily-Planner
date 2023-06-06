@@ -48,6 +48,12 @@ $(function () {
       container.append(timeBlock);
     }
   }
+ 
+  function formatHour(hour) {
+    var amPm = hour >= 12 ? "PM" : "AM";
+    var formattedHour = hour % 12 === 0 ? 12 : hour % 12;
+    return formattedHour + amPm;
+  }
 
 
   });
