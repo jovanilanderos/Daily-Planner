@@ -20,4 +20,16 @@ $(function () {
     });
   }
 
+  function loadDescriptions() {
+    $(".time-block").each(function () {
+      var timeBlockId = $(this).attr("id");
+      var description = localStorage.getItem(timeBlockId);
+      $(this).find(".description").val(description);
+    });
+  }
+    function displayCurrentDate() {
+        var currentDate = dayjs().format("dddd, MMMM D, YYYY");
+        $("#currentDay").text(currentDate);
+      }
+    
   });
