@@ -54,6 +54,9 @@ $(function () {
     var formattedHour = hour % 12 === 0 ? 12 : hour % 12;
     return formattedHour + amPm;
   }
+  applyTimeBlockClasses();
+  loadDescriptions();
+  displayCurrentDate();
 
 
   });
